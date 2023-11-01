@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+$main-font: "Poppins", sans-serif !default;
+
+$phone-screen: 576px;
+$tablet-screen: 540px;
+$desktop-screen: 1367px;
+
+/* Small devices (mobile/tablets, 1367px and below) */
+@mixin small {
+  @media only screen and (min-width: 0px) and (max-width: #{$tablet-screen}) {
+    @content;
+  }
+}
+
+/* Medium devices (tablets/laptop, 540px) */
+@mixin medium {
+  @media only screen and (min-width: #{$tablet-screen}) and (max-width: #{$desktop-screen}) {
+    @content;
+  }
+}
+
+/* Large devices (latptop/desktop) */
+@mixin large {
+  @media only screen and (min-width: #{$desktop-screen}) {
+    @content;
+  }
+}
+
+@mixin not-large {
+  @media only screen and (max-width: #{$desktop-screen}) {
+    @content;
+  }
+}
+
+@mixin not-small {
+  @media only screen and (min-width: #{$tablet-screen}) {
+    @content;
+  }
+}
+
+$primary: rgb(0, 81, 255);
+$secondary: rgb(63, 150, 63);
+
+$success: rgb(86, 211, 86);
+$danger: rgb(207, 0, 28);
+$warning: rgb(255, 153, 0);
